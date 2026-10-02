@@ -1,7 +1,6 @@
 import os
-import time
 
-#Dicionario vazio para começar
+#Lista vazia para começar
 lista_vendas = []
 
 #Funções usadas no programa
@@ -50,7 +49,7 @@ def relatorio():  #Gera o relatório com todas as vendas
     valor = valor_total()
     total = total_vendas()
     produto_max = produto_mais_vendido()
-    total_produtos = 0  #Variavel para contar os produtos vendidos
+    total_produtos = 0  #Variável para contar os produtos vendidos
     
     #Interface do relatório
     print(f"{'Nº':<5} {'Produto':<15} {'Quantidade':<10} {'Preço':>10}")
@@ -68,7 +67,7 @@ def relatorio():  #Gera o relatório com todas as vendas
     print(f"Valor total arrecadado: R$ {valor:.2f}")
     print(f"O produto mais vendido foi: {produto_max}")
     
-#Inicio da Interface
+#Início da Interface
 while True:
     os.system("cls")
     print("-" * 19, "SVG 1.0", "-" * 19)
@@ -81,14 +80,14 @@ while True:
 """))
     #Opções do sistema 
     match menu:
-        #Adidionar venda ao sistema
+        #Adiciona venda ao sistema
         case 1:
             lista_vendas.append(realizar_venda())
             continue
         
         #Gerar relatório
         case 2:
-            #Não executa o relatório caso não aja produtos cadastrados 
+            #Não executa o relatório caso não haja produtos cadastrados 
             if not lista_vendas:
                 os.system("cls")
                 print("Você ainda não possui vendas cadastradas!")
@@ -99,7 +98,7 @@ while True:
             relatorio()
             print()
             
-            #Verifica se o usuario deseja encerrar o sistema
+            #Verifica se o usuário deseja encerrar o sistema
             print("Deseja Encerrar o Sistema ?")
             fim = (input("""S - Sim  N - Não
 """)).upper()
@@ -108,6 +107,6 @@ while True:
             else:
                 continue
         
-        #Fechar o sistema
+        #Fecha o sistema
         case 3:
             exit()
