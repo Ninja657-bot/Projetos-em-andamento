@@ -83,6 +83,8 @@ while True:
         #Adiciona venda ao sistema
         case 1:
             lista_vendas.append(realizar_venda())
+            print()
+            input("Pressione ENTRER para retornar")
             continue
         
         #Gerar relatório
